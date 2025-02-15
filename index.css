@@ -1,0 +1,35 @@
+body {
+    background-color : pink;
+    text-align : center;
+    margin-top : 200px;
+}
+
+p {
+    font-size : 30px;
+}
+
+#yes_button {
+    background-color : green;
+    border : green;
+    border-radius : 10px;
+    color: white;
+    padding : 10px 40px;
+    font-size: 20px;
+    font-weight : bold;
+}
+
+#no_button {
+    background-color : red;
+    border : red;
+    border-radius : 10px;
+    color: black;
+    padding : 10px 40px;
+    font-size: 20px;
+    font-weight : bold;
+    margin-left:10px;
+}
+
+#image {
+    width: 20%;
+    height: auto;
+}

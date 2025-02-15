@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Will you be Shaivi's Valentine?</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <img src="togepi_asking.gif" id="image">
+        </div>
+        <p id="sentence">Will you be Shaivi's Valentine?</p>
+        <div id="buttons">
+            <button id="yes_button">Yes</button>
+            <button id="no_button">No</button>
+        </div>
+
+        <script>
+            let yesBtn = document.getElementById("yes_button");
+            let noBtn = document.getElementById("no_button");
+            let textPar = document.getElementById("sentence");
+            let imgSelect = document.getElementById("image");
+
+            let clickCount=0;
+            noBtn.addEventListener ("click", function() {
+                if (clickCount<5) {
+                    let currentSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
+                    yesBtn.style.fontSize = (currentSize+20) + "px";
+                    imgSelect.src="togepi_sad.webp";
+                    if (clickCount==0) {
+                        textPar.innerHTML = "Are you <b>sure?</b>";
+                    }
+                    if (clickCount==1) {
+                        textPar.innerHTML = "<b>How can you do this to me?</b>";
+                    }
+                    if (clickCount==2) {
+                        textPar.innerHTML = "Please... don't leave me!";
+                    }
+                    if (clickCount==3) {
+                        textPar.innerHTML = "I am giving you <b>last warning</b>";
+                    }
+                    if (clickCount==4) {
+                        textPar.innerHTML = "<b>Last chance!!</b>";
+                    }
+                    clickCount++;
+                    
+                }
+                else {
+                    alert("You have no option but to say yes, darling! 💘💘");
+                    noBtn.remove()
+                }
+            })
+
+            yesBtn.addEventListener ("click", function() {
+                textPar.innerHTML = "Yay! I knew you would say <b>yes!!</b>💖";
+                yesBtn.remove();
+                noBtn.remove();
+                imgSelect.src="togepi_happy.webp";
+            })
+        </script>
+    </body>
+    
+</html>
